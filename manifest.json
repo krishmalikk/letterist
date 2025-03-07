@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Letterist",
+  "version": "1.0",
+  "description": "Enhance your email writing with AI-powered suggestions.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+  "https://*/*",
+  "http://*/*",
+  "https://api.openai.com/*"
+],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons8-hacker-50.png",
+      "48": "icons8-hacker-50.png",
+      "128": "icons8-hacker-50.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*", "https://outlook.live.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

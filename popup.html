@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letterist</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Letterist <span>✉️</span></h1>
+        
+        <!-- Theme Toggle Switch -->
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider round"></span>
+            </label>
+            <span>Dark Mode</span>
+        </div>
+
+        <p>Highlight text in your browser or add a description to improve your email:</p>
+        <textarea id="description" placeholder="Copy and paste the email you would like to respond to..."></textarea>
+
+
+        <!-- AI Response Box -->
+<textarea id="ai-response" placeholder="AI-generated email will be here..." readonly></textarea>
+
+<!-- Tone Selection Buttons -->
+<div class="tone-buttons">
+    <button class="tone-btn" data-tone="formal">Formal</button>
+    <button class="tone-btn" data-tone="casual">Casual</button>
+    <button class="tone-btn" data-tone="persuasive">Persuasive</button>
+    <button class="tone-btn" data-tone="apologetic">Apologetic</button>
+</div>
+
+<!-- Generate Email Button -->
+<button id="generate">Generate Email</button>
+
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

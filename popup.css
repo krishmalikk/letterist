@@ -1,0 +1,212 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 15px;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Ensure everything is centered properly */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  padding-left: 5px; /* Shift everything slightly to the left */
+}
+
+h1 {
+  color: #6a0dad;
+}
+
+/* Make sure text doesn't go off the screen */
+h1, p {
+  text-align: center;
+  width: 100%;
+  white-space: normal;
+}
+
+/* Fix textareas and ensure they are within bounds */
+textarea, #ai-response {
+  width: 100%;
+  max-width: 340px;
+  height: 80px;
+  margin: 10px auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-left: -5px; /* Shift text areas slightly to the left */
+}
+
+button {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 150px;
+}
+
+button:hover {
+  background-color: #5a0bac;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #6a0dad;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Center the tone buttons properly */
+.tone-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 350px;
+  margin: 10px auto;
+  margin-left: -5px; /* Shift tone buttons slightly to the left */
+}
+
+.tone-btn {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tone-btn:hover {
+  background-color: #ccc;
+}
+
+.tone-btn.selected {
+  background-color: #6a0dad;
+  color: white;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode textarea {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark-mode button {
+  background-color: #6a0dad;
+}
+
+.dark-mode .slider {
+  background-color: #555;
+}
+
+.dark-mode .tone-btn {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .tone-btn:hover {
+  background-color: #555;
+}
+
+.dark-mode .tone-btn.selected {
+  background-color: #6a0dad;
+}
+
+/* Ensure Generate Email button stays inside and is centered */
+#generate {
+  width: 100%;
+  max-width: 150px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  margin-left: -5px; /* Shift generate button slightly to the left */
+}
+
+/* Ensure consistent popup size */
+html, body {
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* AI Response Box Styling */
+#ai-response {
+  width: 100%;
+  max-width: 340px;
+  height: 80px;
+  margin: 10px auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  color: #333;
+  resize: none;
+  box-sizing: border-box;
+  margin-left: -5px; /* Shift AI response box slightly to the left */
+}
+
+/* Dark mode styling for AI response box */
+.dark-mode #ai-response {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
